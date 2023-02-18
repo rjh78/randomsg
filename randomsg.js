@@ -31,7 +31,7 @@ let adjective = [
   "humble",
   "daring",
 ];
-let infinitive_phrase = [
+let infinitive = [
   "live",
   "learn",
   "challenge yourself",
@@ -42,16 +42,17 @@ let infinitive_phrase = [
 ];
 
 let output_str = "";
+function randomNum(value) {
+  return Math.floor(Math.random() * value);
+}
 
 //creates random index value for each array
-let verbIndex = Math.floor(Math.random() * verb.length);
-let nounIndex = Math.floor(Math.random() * noun.length);
-let adjectiveIndex = Math.floor(Math.random() * adjective.length);
-let infinitive_phraseIndex = Math.floor(
-  Math.random() * infinitive_phrase.length
-);
+let verbIndex = randomNum(verb.length);
+let nounIndex = randomNum(noun.length);
+let adjectiveIndex = randomNum(adjective.length);
+let infinitiveIndex = randomNum(infinitive.length);
 
 //build the random message output string
-output_str = `\nYou can ${verb[verbIndex]} positive things with ${noun[nounIndex]}!\n\n Be ${adjective[adjectiveIndex]} in your efforts to ${infinitive_phrase[infinitive_phraseIndex]}!\n`;
+output_str = `\nYou can ${verb[verbIndex]} positive things with ${noun[nounIndex]}!\n\n Be ${adjective[adjectiveIndex]} in your efforts to ${infinitive[infinitiveIndex]}!\n`;
 
 console.log(output_str);
