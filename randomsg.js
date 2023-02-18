@@ -42,6 +42,8 @@ let infinitive = [
 ];
 
 let output_str = "";
+
+//helper function to calculate random index for each array
 function randomNum(value) {
   return Math.floor(Math.random() * value);
 }
